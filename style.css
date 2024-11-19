@@ -55,8 +55,8 @@ body{
     height: 50px;
     width: 179px;
     background-color: #002c61;
-    color: white; /* Couleur du texte */
-    border: none; /* Supprime la bordure par défaut */
+    color: white;
+    border: none;
     font-size: 40px;
 
 }
