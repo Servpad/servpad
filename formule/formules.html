@@ -1,11 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style-formule.css" />
+    <title>Le Fin Gourmet - Restaurant Gastronomique</title>
+    <style>
+        /* Global Styles */
+       
+    </style>
 </head>
 <body>
-    f
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>Le Fin Gourmet</h1>
+            <p>Restaurant gastronomique - Nos formules</p>
+        </header>
+
+        <!-- Menu Section -->
+        <section class="menu-section">
+            <div class="menu-item">
+                <h3>Formule Classique</h3>
+                <p><b>Entrée :</b> Soupe à l’oignon gratinée<br>
+                   <b>Plat :</b> Poulet rôti aux herbes et purée maison<br>
+                   <b>Dessert :</b> Mousse au chocolat</p>
+                <span class="price">€35</span>
+                <button class="action-button" onclick="addToOrder('Formule Classique', 35)">Commander</button>
+            </div>
+            <div class="menu-item">
+                <h3>Formule Gourmande</h3>
+                <p><b>Entrée :</b> Foie gras maison et confiture de figues<br>
+                   <b>Plat :</b> Filet de bœuf, légumes grillés et sauce bordelaise<br>
+                   <b>Dessert :</b> Tarte tatin maison</p>
+                <span class="price">€50</span>
+                <button class="action-button" onclick="addToOrder('Formule Gourmande', 50)">Commander</button>
+            </div>
+            <div class="menu-item">
+                <h3>Formule Végétarienne</h3>
+                <p><b>Entrée :</b> Salade de quinoa et légumes croquants<br>
+                   <b>Plat :</b> Risotto aux champignons et asperges<br>
+                   <b>Dessert :</b> Sorbet citron-basilic</p>
+                <span class="price">€30</span>
+                <button class="action-button" onclick="addToOrder('Formule Végétarienne', 30)">Commander</button>
+            </div>
+            <div class="menu-item">
+                <h3>Formule Terre & Mer</h3>
+                <p><b>Entrée :</b> Tartare de saumon à l’aneth<br>
+                   <b>Plat :</b> Côte de veau et crevettes grillées, sauce citronnée<br>
+                   <b>Dessert :</b> Mille-feuille vanille</p>
+                <span class="price">€60</span>
+                <button class="action-button" onclick="addToOrder('Formule Terre & Mer', 60)">Commander</button>
+            </div>
+            <div class="menu-item">
+                <h3>Formule Tradition</h3>
+                <p><b>Entrée :</b> Œufs cocotte à la truffe<br>
+                   <b>Plat :</b> Cassoulet au confit de canard<br>
+                   <b>Dessert :</b> Crème brûlée</p>
+                <span class="price">€45</span>
+                <button class="action-button" onclick="addToOrder('Formule Tradition', 45)">Commander</button>
+            </div>
+            <div class="menu-item">
+                <h3>Formule Méditerranéenne</h3>
+                <p><b>Entrée :</b> Gaspacho de tomates et basilic<br>
+                   <b>Plat :</b> Filet de dorade grillée, légumes du soleil<br>
+                   <b>Dessert :</b> Tiramisu citron et spéculoos</p>
+                <span class="price">€40</span>
+                <button class="action-button" onclick="addToOrder('Formule Méditerranéenne', 40)">Commander</button>
+            </div>
+        </section>
+
+        <!-- Admin Section -->
+        <div class="section" id="admin-section" style="display: none;">
+            <h2>Section Admin</h2>
+            <div id="order-list">
+                <!-- Les commandes des clients seront affichées ici -->
+            </div>
+        </div>
+
+        <!-- Server Section -->
+        <div class="section" id="server-section" style="display: none;">
+            <h2>Section Serveur</h2>
+            <div id="validated-orders">
+                <!-- Les commandes validées par la cuisine seront affichées ici -->
+            </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="javascript:void(0)" class="action-button" onclick="showAdminSection()">Accéder à la partie Admin</a>
+            <a href="javascript:void(0)" class="action-button" onclick="showServerSection()">Accéder à la partie Serveur</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Le Fin Gourmet - Tous droits réservés</p>
+        </div>
+    </div>
+
+   
+
 </body>
+<script src="app-formules.js"></script>
 </html>
