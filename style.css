@@ -1,8 +1,8 @@
-body{
+body {
     background-color: #D9D9D9;
 }
 
-.topContainer{
+.topContainer {
     display: flex;
 }
 
@@ -15,31 +15,31 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .logoTopLeft span {
-    width: 10px;              
+    width: 10px;
     height: 70px;
 }
 
 .logoTopLeft p {
-    width: 227.6px;              
+    width: 227.6px;
     height: 118px;
     font-size: 65px;
     margin: 0px;
     font-weight: bold;
-    color: rgb(0, 0, 0);
-    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 100%;
 }
 
-.menuTop{
+.menuTop {
     color: #002C61;
 }
 
 
-.menuTop{
+.menuTop {
     background-color: #002C61;
     height: 92px;
     width: 851px;
@@ -47,11 +47,10 @@ body{
     position: relative;
     display: flex;
     justify-content: center;
-
     align-items: center;
-  }
+}
 
-.button{
+.button {
     height: 50px;
     width: 179px;
     background-color: #002c61;
@@ -61,7 +60,7 @@ body{
 
 }
 
-h1{
+h1 {
     margin-top: 72px;
     margin-bottom: 0;
     display: grid;
@@ -72,11 +71,63 @@ h1{
 
 }
 
-h2{
+h2 {
     margin: 0;
     display: grid;
     place-items: center;
     height: 100%;
     font-size: 70px;
+
+}
+
+.picturehorizontal {
+    display: flex; 
+}
+
+.pictureBottom {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.picture1 {
+    height: 284px;
+    width: 483px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: black 5px solid;
+
+}
+
+.picture2 {
+    height: 284px;
+    width: 278px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: black 5px solid;
+
+} 
+
+
+
+.picturevertical{
+    display: flex;
+    flex-direction: column;
+}
+
+.picture3 {
+    height: 132px;
+    width: 176px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: black 5px solid;
+}
+
+.picture4 {
+    height: 131px;
+    width: 178px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: black 5px solid;
 
 }
