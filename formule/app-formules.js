@@ -1,10 +1,20 @@
-const orders = [];
+// init panier
+let orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+// selec element html
+
+
+
+// Liste des commandes validées
 const validatedOrders = [];
 
 // Ajouter une commande
 function addToOrder(item, price) {
     orders.push({ item, price });
-    alert(`${item} ajouté au panier.`);
+    alert(`${item} ajouté au panier.`)
+    localStorage.setItem('${item}', '${price}');
+
+    console.log(`${item} ${price} ajouté au panier.`);
 }
 
 // Section Admin
