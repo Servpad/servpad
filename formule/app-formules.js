@@ -13,23 +13,22 @@ function addToOrder(item, price) {
     orders.push({ item, price });
     alert(`${item} ajouté au panier.`)
     localStorage.setItem('${item}', '${price}');
-
     console.log(`${item} ${price} ajouté au panier.`);
 }
 
-// Section Admin
-function showAdminSection() {
-    const password = prompt("Entrez le mot de passe admin :");
-    if (password === "admin123") {
-        document.getElementById("admin-section").style.display = "block";
+// Section cuisine
+function showcuisineSection() {
+    const password = prompt("Entrez le mot de passe cuisine :");
+    if (password === "cuisine123") {
+        document.getElementById("cuisine-section").style.display = "block";
         document.getElementById("server-section").style.display = "none";
-        updateAdminSection();
+        updatecuisineSection();
     } else {
         alert("Mot de passe incorrect !");
     }
 }
 
-function updateAdminSection() {
+function updatecuisineSection() {
     const orderList = document.getElementById("order-list");
     if (orders.length === 0) {
         orderList.innerHTML = "<p>Aucune commande à valider.</p>";
@@ -46,7 +45,7 @@ function updateAdminSection() {
 function validateOrder(index) {
     validatedOrders.push(orders[index]);
     orders.splice(index, 1);
-    updateAdminSection();
+    updatecuisineSection();
 }
 
 // Section Serveur
@@ -54,7 +53,7 @@ function showServerSection() {
     const password = prompt("Entrez le mot de passe serveur :");
     if (password === "server123") {
         document.getElementById("server-section").style.display = "block";
-        document.getElementById("admin-section").style.display = "none";
+        document.getElementById("cuisine-section").style.display = "none";
         updateServerSection();
     } else {
         alert("Mot de passe incorrect !");
