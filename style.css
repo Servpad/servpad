@@ -20,11 +20,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 32px;
+    margin: 24px;
 }
 
 .logoTopLeft {
     width: 249px;
-    height: 91px;
+    height: 92px;
     border-radius: 20px;
     background-color: #A21010;
     display: flex;
@@ -39,7 +41,6 @@ body {
 
 .logoTopLeft p {
     width: 227.6px;
-    height: 118px;
     font-size: 65px;
     margin: 0px;
     font-weight: bold;
@@ -47,7 +48,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 100%;
 }
 
 .menuTop {
