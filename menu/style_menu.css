@@ -144,7 +144,8 @@ p {
 }
 
 .footer {
-    background-color: #f1f1f1;
+
+    background-color: none;
     text-align: center;
     padding: 20px;
     font-size: 14px;
