@@ -1,11 +1,25 @@
+html {
+    height: 100vh;
+}
+
 body {
     background-color: #D9D9D9;
     font-family: 'Playfair Display', serif;
+    height: 100%;
+    margin: 0;
+}
 
+.indexContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: calc(100% - 104px);
 }
 
 .topContainer {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .logoTopLeft {
@@ -58,13 +72,18 @@ body {
 
 }
 
+.svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 h1 {
-    margin-top: 72px;
     margin-bottom: 0;
     display: grid;
     place-items: center;
-    height: 100%;
     font-size: 90px;
+    margin-top: 0px;
 
 
 }
@@ -73,13 +92,13 @@ h2 {
     margin: 0;
     display: grid;
     place-items: center;
-    height: 100%;
     font-size: 70px;
 
 }
 
 .picturehorizontal {
-    display: flex; 
+    display: flex;
+    gap: 10px;
 }
 
 .pictureBottom {
@@ -104,13 +123,14 @@ h2 {
     overflow: hidden;
     border: black 5px solid;
 
-} 
+}
 
 
 
-.picturevertical{
+.picturevertical {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .picture3 {
