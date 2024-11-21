@@ -28,6 +28,7 @@ body {
     align-items: center;
     justify-content: space-around;
     height: 100%;
+
 }
 
 .menuTop {
@@ -36,6 +37,7 @@ body {
 
 
 .menuTop {
+    
     background-color: #002C61;
     height: 92px;
     width: 896px;
@@ -49,6 +51,7 @@ body {
 .button {
     height: 50px;
     width: 179px;
+    font-family: 'Playfair Display', serif;
     background-color: #002c61;
     color: white;
     border: none;
@@ -71,7 +74,7 @@ header {
 }
 
 h1 {
-    color: #1D4D7D;
+    color: #002C61;
     font-size: 36px;
     font-weight: bold;
 }
@@ -107,7 +110,7 @@ h2 {
 }
 
 .menu-item h3 {
-    color: #1D4D7D;
+    color: #002C61;
     font-size: 24px;
 }
 
@@ -123,7 +126,7 @@ h2 {
 }
 
 .action-button {
-    background-color: #1D4D7D;
+    background-color: #002C61;
     color: #fff;
     padding: 10px 20px;
     border-radius: 8px;
@@ -134,7 +137,7 @@ h2 {
 }
 
 .action-button:hover {
-    background-color: #163a5b;
+    background-color: #002C61;
 }
 
 .footer {
