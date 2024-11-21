@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+
+    <!-- head -->
+    <header>
     <div class="top">
         <div class="topContainer">
             <div class="logoTopLeft">
@@ -65,5 +68,61 @@
                 </svg>
             </div>
         </div>
+    </header>
+
+    <!-- body -->
+    <section class="menu-section">
+        <div class="menu-item">
+            <h3>Formule Classique</h3>
+            <p><b>Entrée :</b> Soupe à l’oignon gratinée<br>
+               <b>Plat :</b> Poulet rôti aux herbes et purée maison<br>
+               <b>Dessert :</b> Mousse au chocolat</p>
+            <span class="price">€35</span>
+            <button class="action-button" onclick="addToOrder('Formule Classique', 35)">Commander</button>
+        </div>
+        <div class="menu-item">
+            <h3>Soupe à l’oignon gratinée</h3>
+            <p><b>description :</b>Une soupe traditionnelle française, garnie de fromage fondu et de croûtons dorés.<br>
+                <b></b>.</p>
+            <span class="price">6.50€</span>
+            <button class="action-button" onclick="addToOrder('Formule Gourmande', 50)">Commander</button>
+        </div>
+        <div class="menu-item">
+            <h3>Tartare de saumon à l’avocat</h3>
+            <p><b>description :</b>Un tartare frais et léger, avec une touche de citron vert.<br>
+               <b></b> .</p>
+            <span class="price">9.90€</span>
+            <button class="action-button" onclick="addToOrder('Formule Végétarienne', 30)">Commander</button>
+        </div>
+        <div class="menu-item">
+            <h3>Entrecôte grillée sauce au poivre</h3>
+            <p><b>descripton :</b> Tartare de saumon à l’aneth<br>
+               <b></b>Une pièce de bœuf juteuse accompagnée de frites maison et d’une salade.</p>
+               <b></b>.</p>
+            <span class="price">18,90€</span>
+            <button class="action-button" onclick="addToOrder('Formule Terre & Mer', 60)">Commander</button>
+        </div>
+        <div class="menu-item">
+            <h3>Risotto aux champignons sauvages</h3>
+            <p><b>descripton :</b> Un risotto crémeux parfumé aux cèpes et parmesan.<br>
+            <span class="price">16,50 €</span>
+            <button class="action-button" onclick="addToOrder('Formule Terre & Mer', 60)">Commander</button>
+        </div>
+        <div class="menu-item">
+            <h3>Poulet rôti à l’estragon</h3>
+            <p><b>descripton :</b>  Servi avec des pommes de terre sautées et une sauce légère à l’estragon.<br>
+                <b></b>.</p>
+                <span class="price">15,90 €</span>
+
+            <button class="action-button" onclick="addToOrder('Formule Terre & Mer', 60)">Commander</button>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>&copy; 2024 Le Fin Gourmet - Tous droits réservés</p>
+    </div>
+</div>
+
+
 </body>
 </html>
