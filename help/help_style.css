@@ -80,3 +80,24 @@ body {
     font-size: 16px;
 
 }
+
+.helpcontainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.explicationTitle{
+    display: flex;
+    text-decoration: underline;
+}
+
+.titleAide{
+    text-decoration: underline;
+  
+}
+
+.svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
