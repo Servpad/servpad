@@ -4,7 +4,7 @@ body {
 }
 .topContainer {
     display: flex;
-    min-height: 100px;
+    min-height: 92px;
 }
 
 .logoTopLeft {
