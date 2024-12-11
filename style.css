@@ -122,9 +122,15 @@ h2 {
     height: 284px;
     width: 483px;
     border-radius: 24px;
-    overflow: hidden;
     border: black 5px solid;
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
 
+.picture1:hover {
+    transform: scale(1.2);
 }
 
 .picture2 {
@@ -133,7 +139,12 @@ h2 {
     border-radius: 24px;
     overflow: hidden;
     border: black 5px solid;
-
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
+.picture2:hover {
+    transform: scale(1.2);
 }
 
 
