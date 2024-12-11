@@ -161,6 +161,14 @@ h2 {
     border-radius: 24px;
     overflow: hidden;
     border: black 5px solid;
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
+
+.picture3:hover {
+    transform: scale(1.2);
 }
 
 .picture4 {
@@ -169,5 +177,12 @@ h2 {
     border-radius: 24px;
     overflow: hidden;
     border: black 5px solid;
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
 
+.picture4:hover {
+    transform: scale(1.2);
 }
