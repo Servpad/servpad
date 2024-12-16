@@ -57,10 +57,13 @@ body {
     height: 92px;
     width: 896px;
     border-radius: 20px;
+    border: 4px solid #fff; /* Bordure blanche a enlever plus tards */
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
     
 }
 

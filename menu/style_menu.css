@@ -160,16 +160,16 @@ p {
 /* From Uiverse.io by SmookyDev */
 .custom-button {
     padding: 1rem 2rem;
-    z-index: 30;
+    z-index: 1;
     background-color: #3a3a3a;
-    border-radius: 0.375rem; /* 6px */
+    border-radius: 25px;
     color: white;
     position: relative;
     font-weight: 600;
     overflow: hidden;
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.2rem;
     transition: all 0.7s;
-    text-shadow: 3px 3px 2px #ffffff;
+    text-shadow: 0px 0px 2px #ff0000;
   }
   
   .custom-button:after {
