@@ -130,10 +130,15 @@ h2 {
     overflow: hidden;
     transition: transform 0.3s ease;
     transform: scale(1);
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    transform: scale(1);
+    position: relative; /* Permet d'utiliser z-index */
+    z-index: 1; /* Position de base */
 }
 
 .picture1:hover {
     transform: scale(1.2);
+    z-index: 10; /* Place au premier plan lors du survol */
 }
 
 .picture2 {
@@ -145,9 +150,14 @@ h2 {
     display: inline-block;
     transition: transform 0.3s ease;
     transform: scale(1);
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    transform: scale(1);
+    position: relative; /* Permet d'utiliser z-index */
+    z-index: 1; /* Position de base */
 }
 .picture2:hover {
     transform: scale(1.2);
+    z-index: 10; /* Place au premier plan lors du survol */
 }
 
 
@@ -168,10 +178,15 @@ h2 {
     overflow: hidden;
     transition: transform 0.3s ease;
     transform: scale(1);
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    transform: scale(1);
+    position: relative; /* Permet d'utiliser z-index */
+    z-index: 1; /* Position de base */
 }
 
 .picture3:hover {
     transform: scale(1.2);
+    z-index: 10; /* Place au premier plan lors du survol */
 }
 
 .picture4 {
@@ -184,10 +199,15 @@ h2 {
     overflow: hidden;
     transition: transform 0.3s ease;
     transform: scale(1);
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    transform: scale(1);
+    position: relative; /* Permet d'utiliser z-index */
+    z-index: 1; /* Position de base */
 }
 
 .picture4:hover {
     transform: scale(1.2);
+    z-index: 10; /* Place au premier plan lors du survol */
 }
 
  
