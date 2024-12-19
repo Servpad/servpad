@@ -313,3 +313,20 @@ then set the desired styles for .card-img. */
     object-fit: cover; /* Maintient les proportions de l'image */
     border-radius: 5px; /* Facultatif : arrondir les coins */
   }
+
+  .card-img-specific {
+    width: 150px; 
+    max-width: 75%; /* L'image s'adapte à la largeur de la carte */
+    max-height: 75%;
+    object-fit: cover; /* Maintient les proportions de l'image */
+    border-radius: 5px; /* Facultatif : arrondir les coins */
+  }
+
+  .card-img-specific1 {
+    width: 140px; 
+    max-width: 80%; /* L'image s'adapte à la largeur de la carte */
+    max-height: 50%;
+    object-fit: cover; /* Maintient les proportions de l'image */
+    border-radius: 5px; /* Facultatif : arrondir les coins */
+    margin-top: 50px;
+  }
