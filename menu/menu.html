@@ -8,34 +8,54 @@
     <link rel="stylesheet" href="../style.css" />
 
     <!-- barre de nav -->
-    <title>servpad</title>
-    <link rel="icon" href="image/vaisselle.png" type="image/png">
-
-</head>
-
-<body>
-
-    <!-- head -->
-    <header>
         <div class="top">
             <div class="topContainer">
-                <div class="logoTopLeft">
-                    <p>servpad</p>
+                <div>
+                    <button class="button">
+                        <span class="label">SERVPAD</span>
+                        <span class="gradient-container">
+                            <span class="gradient"></span>
+                        </span>
+                    </button>
                 </div>
-                <div class="topContainer">
-                    <nav class="menuTop">
-                        <ul>
-                            <li>
-                                <a class="button" href="../index.html">Accueil</a>
-                            </li>
-                            <li>
-                                <a class="button" href="../menu/menu.html">Menu</a>
-                            </li>
-                            <li>
-                                <a class="button" href="../formule/formules.html">Formules</a>
-                            </li>
-                        </ul>
-                </div>
+                <nav class="menuTop">
+                    <ul>
+                            <a class="button2" href="../index.html">
+
+                                <button class="button2">
+                                    <span class="label2">Accueil</span>
+                                    <span class="gradient-container2">
+                                        <span class="gradient2"></span>
+                                    </span>
+                                </button>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a class="button2" href="../menu/menu.html">
+
+                                <button class="button2">
+                                    <span class="label2">Menu</span>
+                                    <span class="gradient-container2">
+                                        <span class="gradient2"></span>
+                                    </span>
+                                </button>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a class="button2" href="../formule/formules.html">
+
+                                <button class="button2">
+                                    <span class="label2">formule</span>
+                                    <span class="gradient-container2">
+                                        <span class="gradient2"></span>
+                                    </span>
+                                </button>
+
+                            </a>
+                        </li>
+                    </ul>
                 </nav>
 
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="92px"
@@ -82,77 +102,73 @@
                         d="M127.714,137.45c-37.58,0-68.152,38.794-68.152,86.479c0,34.9,16.354,65.998,41.235,79.48v33.256  c-5.747,5.06-9.163,12.397-9.163,20.132v45.817c0,4.744,3.846,8.591,8.591,8.591c4.744,0,8.591-3.846,8.591-8.591v-45.817  c0-3.451,1.829-6.577,4.893-8.36c2.644-1.538,4.27-4.366,4.27-7.425v-42.991c0-3.452-2.066-6.568-5.246-7.913  c-21.19-8.958-35.989-36.172-35.989-66.18c0-38.211,22.865-69.298,50.971-69.298s50.971,31.087,50.971,69.298  c0,30.008-14.799,57.221-35.989,66.18c-3.18,1.345-5.246,4.461-5.246,7.913v42.991c0,3.058,1.626,5.886,4.27,7.425  c3.064,1.783,4.893,4.909,4.893,8.36v82.47c0,4.744,3.846,8.591,8.591,8.591c4.744,0,8.591-3.846,8.591-8.591v-82.47  c0-7.735-3.417-15.071-9.163-20.132v-33.256c24.881-13.483,41.235-44.581,41.235-79.48  C195.866,176.244,165.294,137.45,127.714,137.45z" />
                 </svg>
             </div>
-        </div>
-    </header>
-
-    <!-- body -->
-    <section class="menu-section">
-        <div class="menu-item">
-            <h3>Formule Classique</h3>
-            <p><b>Entrée :</b> Soupe à l’oignon gratinée<br>
-                <b>Plat :</b> Poulet rôti aux herbes et purée maison<br>
-                <b>Dessert :</b> Mousse au chocolat
-            </p>
-            <span class="price">€35</span>
-            <button class="custom-button" onclick="addToOrder('Formule Gourmande', 50)">Commander</button>
-        </div>
-        <div class="menu-item">
-            <h3>Soupe à l’oignon gratinée</h3>
-            <p><b>description :</b>Une soupe traditionnelle française, garnie de fromage fondu et de croûtons dorés.<br>
-                <b></b>.
-            </p>
-            <span class="price">6.50€</span>
-            <button class="custom-button" onclick="addToOrder('Formule Gourmande', 50)">Commander</button>
-        </div>
-        <div class="menu-item">
-            <h3>Tartare de saumon à l’avocat</h3>
-            <p><b>description :</b>Un tartare frais et léger, avec une touche de citron vert.<br>
-                <b></b> .
-            </p>
-            <span class="price">9.90€</span>
-            <button class="custom-button" onclick="addToOrder('Formule Gourmande', 50)">Commander</button>
-        </div>
-        <div class="menu-item">
-            <h3>Entrecôte grillée sauce au poivre</h3>
-            <p><b>descripton :</b> Tartare de saumon à l’aneth<br>
-                <b></b>Une pièce de bœuf juteuse accompagnée de frites maison et d’une salade.
-            </p>
-            <b></b>.</p>
-            <span class="price">18,90€</span>
-            <button class="custom-button" onclick="addToOrder('Formule Gourmande', 50)">Commander</button>
-        </div>
-        <div class="menu-item">
-            <h3>Risotto aux champignons sauvages</h3>
-            <p><b>descripton :</b> Un risotto crémeux parfumé aux cèpes et parmesan.<br>
-                <span class="price">16,50 €</span>
-                <button class="custom-button" onclick="addToOrder('Formule Gourmande', 50)">Commander</button>
-        </div>
-        <div class="menu-item">
-            <h3>Poulet rôti à l’estragon</h3>
-            <p><b>descripton :</b> Servi avec des pommes de terre sautées et une sauce légère à l’estragon.<br>
-                <b></b>.
-            </p>
-            <span class="price">15,90 €</span>
-            <button class="custom-button" onclick="addToOrder('Formule Gourmande', 50)">Commander</button>
-        </div>
-    </section>
-
-    <div class="footer">
-        <p>&copy; 2024 Le Fin Gourmet - Tous droits réservés</p>
+<!-- body -->
+<section class="menu-section">
+    <div class="menu-item">
+        <h3>Formule Classique</h3>
+        <p><b>Entrée :</b> Soupe à l’oignon gratinée<br>
+            <b>Plat :</b> Poulet rôti aux herbes et purée maison<br>
+            <b>Dessert :</b> Mousse au chocolat
+        </p>
+        <span class="price">€35</span>
+        <button class="custom-button" onclick="addToOrder('Formule Gourmande', 50)">Commander</button>
     </div>
+    <div class="menu-item">
+        <h3>Soupe à l’oignon gratinée</h3>
+        <p><b>description :</b>Une soupe traditionnelle française, garnie de fromage fondu et de croûtons dorés.<br>
+            <b></b>.
+        </p>
+        <span class="price">6.50€</span>
+        <button class="custom-button" onclick="addToOrder('Formule Gourmande', 50)">Commander</button>
     </div>
+    <div class="menu-item">
+        <h3>Tartare de saumon à l’avocat</h3>
+        <p><b>description :</b>Un tartare frais et léger, avec une touche de citron vert.<br>
+            <b></b> .
+        </p>
+        <span class="price">9.90€</span>
+        <button class="custom-button" onclick="addToOrder('Formule Gourmande', 50)">Commander</button>
+    </div>
+    <div class="menu-item">
+        <h3>Entrecôte grillée sauce au poivre</h3>
+        <p><b>descripton :</b> Tartare de saumon à l’aneth<br>
+            <b></b>Une pièce de bœuf juteuse accompagnée de frites maison et d’une salade.
+        </p>
+        <b></b>.</p>
+        <span class="price">18,90€</span>
+        <button class="custom-button" onclick="addToOrder('Formule Gourmande', 50)">Commander</button>
+    </div>
+    <div class="menu-item">
+        <h3>Risotto aux champignons sauvages</h3>
+        <p><b>descripton :</b> Un risotto crémeux parfumé aux cèpes et parmesan.<br>
+            <span class="price">16,50 €</span>
+            <button class="custom-button" onclick="addToOrder('Formule Gourmande', 50)">Commander</button>
+    </div>
+    <div class="menu-item">
+        <h3>Poulet rôti à l’estragon</h3>
+        <p><b>descripton :</b> Servi avec des pommes de terre sautées et une sauce légère à l’estragon.<br>
+            <b></b>.
+        </p>
+        <span class="price">15,90 €</span>
+        <button class="custom-button" onclick="addToOrder('Formule Gourmande', 50)">Commander</button>
+    </div>
+</section>
 
-    <a class="svg" href="../help/help.html">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24" fill="none">
-            <path
-                d="M10.75 2.44995C11.45 1.85995 12.58 1.85995 13.26 2.44995L14.84 3.79995C15.14 4.04995 15.71 4.25995 16.11 4.25995H17.81C18.87 4.25995 19.74 5.12995 19.74 6.18995V7.88995C19.74 8.28995 19.95 8.84995 20.2 9.14995L21.55 10.7299C22.14 11.4299 22.14 12.5599 21.55 13.2399L20.2 14.8199C19.95 15.1199 19.74 15.6799 19.74 16.0799V17.7799C19.74 18.8399 18.87 19.7099 17.81 19.7099H16.11C15.71 19.7099 15.15 19.9199 14.85 20.1699L13.27 21.5199C12.57 22.1099 11.44 22.1099 10.76 21.5199L9.18001 20.1699C8.88001 19.9199 8.31 19.7099 7.92 19.7099H6.17C5.11 19.7099 4.24 18.8399 4.24 17.7799V16.0699C4.24 15.6799 4.04 15.1099 3.79 14.8199L2.44 13.2299C1.86 12.5399 1.86 11.4199 2.44 10.7299L3.79 9.13995C4.04 8.83995 4.24 8.27995 4.24 7.88995V6.19995C4.24 5.13995 5.11 4.26995 6.17 4.26995H7.9C8.3 4.26995 8.86 4.05995 9.16 3.80995L10.75 2.44995Z"
-                stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M12 8.13V12.96" stroke="#a21e1e" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-            <path d="M11.9945 16H12.0035" stroke="#a21e1e" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </svg>
-    </a>
+<div class="footer">
+    <p>&copy; 2024 Le Fin Gourmet - Tous droits réservés</p>
+</div>
+</div>
+
+<a class="svg" href="../help/help.html">
+    <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24" fill="none">
+        <path
+            d="M10.75 2.44995C11.45 1.85995 12.58 1.85995 13.26 2.44995L14.84 3.79995C15.14 4.04995 15.71 4.25995 16.11 4.25995H17.81C18.87 4.25995 19.74 5.12995 19.74 6.18995V7.88995C19.74 8.28995 19.95 8.84995 20.2 9.14995L21.55 10.7299C22.14 11.4299 22.14 12.5599 21.55 13.2399L20.2 14.8199C19.95 15.1199 19.74 15.6799 19.74 16.0799V17.7799C19.74 18.8399 18.87 19.7099 17.81 19.7099H16.11C15.71 19.7099 15.15 19.9199 14.85 20.1699L13.27 21.5199C12.57 22.1099 11.44 22.1099 10.76 21.5199L9.18001 20.1699C8.88001 19.9199 8.31 19.7099 7.92 19.7099H6.17C5.11 19.7099 4.24 18.8399 4.24 17.7799V16.0699C4.24 15.6799 4.04 15.1099 3.79 14.8199L2.44 13.2299C1.86 12.5399 1.86 11.4199 2.44 10.7299L3.79 9.13995C4.04 8.83995 4.24 8.27995 4.24 7.88995V6.19995C4.24 5.13995 5.11 4.26995 6.17 4.26995H7.9C8.3 4.26995 8.86 4.05995 9.16 3.80995L10.75 2.44995Z"
+            stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M12 8.13V12.96" stroke="#a21e1e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M11.9945 16H12.0035" stroke="#a21e1e" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+    </svg>
+</a>
 </body>
 
 </html>
