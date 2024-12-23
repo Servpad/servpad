@@ -87,9 +87,9 @@ body {
 }
 
 .svg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 h1 {
@@ -378,6 +378,9 @@ h2 {
       display: inline-block;
       width: 96px;
       height: 54px;
+      position: fixed;
+      top:935px; 
+      left: 60px;
     }
     
     .switch #input {
