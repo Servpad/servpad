@@ -78,14 +78,29 @@ const toggleSwitch = document.getElementById('input');
 
 // Fonction pour appliquer le thème au chargement de la page
 function applyTheme(darkMode) {
+    const cards = document.querySelectorAll('.card'); // Sélectionner toutes les cartes
     if (darkMode === 'enabled') {
         document.body.style.backgroundColor = '#3a3a3a';
         document.body.style.color = '#ffffff';
         toggleSwitch.checked = true; // Synchroniser le bouton
+        
+                // Appliquer le style sombre aux cartes
+    cards.forEach(card => {
+        card.style.backgroundColor = '#c3c3c3'; // Couleur de fond sombre
+        card.style.color = '#ffffff'; // Couleur du texte clair
+        card.style.borderColor = '#666666'; // Couleur de la bordure
+}); 
     } else {
         document.body.style.backgroundColor = '#fff5ec';
         document.body.style.color = '#3a3a3af7';
         toggleSwitch.checked = false; // Synchroniser le bouton
+
+                // Réinitialiser le style des cartes
+    cards.forEach(card => {
+        card.style.backgroundColor = ''; // Couleur par défaut
+        card.style.color = ''; // Couleur par défaut
+        card.style.borderColor = ''; // Couleur par défaut
+ });
     }
 }
 
