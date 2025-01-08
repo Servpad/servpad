@@ -1,5 +1,7 @@
 // Sélectionner l'élément de l'interrupteur
 const toggleSwitch = document.getElementById('input');
+const AddToMomery = document.getElementById('addTomemory');
+
 
 // Fonction pour appliquer le thème au chargement de la page
 function applyTheme(darkMode) {
@@ -30,3 +32,9 @@ toggleSwitch.addEventListener('change', () => {
         applyTheme('disabled'); // Désactiver le mode sombre
     }
 });
+
+function addTomemory() {
+    setItem(test1, coucoulescongolais);
+}
+
+console.log(test1);
