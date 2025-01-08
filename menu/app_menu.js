@@ -37,4 +37,4 @@ function addTomemory() {
     setItem(test1, coucoulescongolais);
 }
 
-console.log(test1);
+console.log(addTomemory);
