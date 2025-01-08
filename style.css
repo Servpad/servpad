@@ -374,14 +374,13 @@ h2 {
   }
     /* Test incorporation bouton theme sombre */
     .switch {
-      position: relative;
-      display: inline-block;
+      position: fixed;
+      bottom: 3px;
+      left: 60px;
       width: 96px;
       height: 54px;
-      position: fixed;
-      top:935px; 
-      left: 60px;
-    }
+
+  }
     
     .switch #input {
       opacity: 0;
