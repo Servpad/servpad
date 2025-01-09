@@ -331,3 +331,51 @@ then set the desired styles for .card-img. */
     border-radius: 5px; /* Facultatif : arrondir les coins */
     margin-top: 50px;
   }
+
+/* Section Panier */
+#cart-section {
+  background-color: #3a3a3a;
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#cart-section h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+#cart-list {
+  margin-bottom: 15px;
+}
+
+#cart-list p {
+  color: #888;
+  font-size: 16px;
+}
+
+.action-button {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-button:hover {
+  background-color: #ffffff;
+}
+
+/* Section Administrateur */
+#admin-section {
+  background-color: #f7f7f7;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

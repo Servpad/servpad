@@ -120,3 +120,73 @@ toggleSwitch.addEventListener('change', () => {
         applyTheme('disabled'); // Désactiver le mode sombre
     }
 });
+
+
+// Initialisation des commandes
+document.addEventListener('DOMContentLoaded', () => {
+    const cartList = document.getElementById('cart-list');
+    const adminOrders = document.getElementById('admin-orders');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let validatedOrders = JSON.parse(localStorage.getItem('validatedOrders')) || [];
+
+    // Mettre à jour le panier
+    const updateCart = () => {
+        if (cart.length === 0) {
+            cartList.innerHTML = '<p>Votre panier est vide.</p>';
+        } else {
+            cartList.innerHTML = cart.map((item, index) => `
+                <div class="menu-item">
+                    <span>${item.name} - €${item.price}</span>
+                    <button onclick="removeFromCart(${index})">Retirer</button>
+                </div>
+            `).join('');
+        }
+    };
+
+    // Ajouter un article au panier
+    window.addToCart = (name, price) => {
+        cart.push({ name, price });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCart();
+        alert(`${name} ajouté au panier.`);
+    };
+
+    // Retirer un article du panier
+    window.removeFromCart = (index) => {
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCart();
+    };
+
+    // Valider le panier
+    window.validateCart = () => {
+        if (cart.length === 0) {
+            alert('Votre panier est vide.');
+            return;
+        }
+        validatedOrders = validatedOrders.concat(cart);
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        localStorage.setItem('validatedOrders', JSON.stringify(validatedOrders));
+        updateCart();
+        updateAdminSection();
+        alert('Commandes validées avec succès.');
+    };
+
+    // Mettre à jour la section administrateur
+    const updateAdminSection = () => {
+        if (validatedOrders.length === 0) {
+            adminOrders.innerHTML = '<p>Aucune commande validée.</p>';
+        } else {
+            adminOrders.innerHTML = validatedOrders.map(order => `
+                <div class="menu-item">
+                    <span>${order.name} - €${order.price}</span>
+                </div>
+            `).join('');
+        }
+    };
+
+    // Charger les données initiales
+    updateCart();
+    updateAdminSection();
+});
