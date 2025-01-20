@@ -1,6 +1,6 @@
 // Sélectionner l'élément de l'interrupteur
 const toggleSwitch = document.getElementById('input');
-const AddToMomery = document.getElementById('addTomemory');
+const AddToMomery1 = document.getElementById('addTomemory');
 
 
 // Fonction pour appliquer le thème au chargement de la page
@@ -8,7 +8,7 @@ function applyTheme(darkMode) {
     if (darkMode === 'enabled') {
         document.body.style.backgroundColor = '#3a3a3a';
         document.body.style.color = '#ffffff';
-        toggleSwitch.checked = true; // Synchroniser le bouton
+        toggleSwitch.checked = true; // Synchroniser le boutonKey
     } else {
         document.body.style.backgroundColor = '#fff5ec';
         document.body.style.color = '#3a3a3af7';
@@ -33,8 +33,9 @@ toggleSwitch.addEventListener('change', () => {
     }
 });
 
+
 function addTomemory() {
     setItem(test1, coucoulescongolais);
 }
 
-console.log(addTomemory);
+console.log(test1);
