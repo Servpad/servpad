@@ -190,3 +190,8 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCart();
     updateAdminSection();
 });
+
+function openSubPage() {
+    window.location.href = 'formule-mediteraneenne.html';
+}
+
