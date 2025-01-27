@@ -1,6 +1,4 @@
 <?php
-session_start();
-ob_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -16,29 +14,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Requête sécurisée avec requêtes préparées
     $sql = "SELECT * FROM users WHERE username = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
 
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        if (password_verify($password, $row['password'])) {
-            $_SESSION['username'] = $username;
-            error_log("Connexion réussie pour $username");
-            header("Location: account.php");
-            die(); // Stop le script après la redirection
+    if ($stmt) {
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            if (password_verify($password, $row['password'])) {
+                // Redirection vers formules.html après connexion réussie
+                header("Location: formule/formules.html");
+                exit();
+            } else {
+                echo "Mot de passe incorrect.";
+            }
         } else {
-            echo "Mot de passe incorrect.";
+            echo "Nom d'utilisateur incorrect.";
         }
+
+        $stmt->close();
     } else {
-        echo "Nom d'utilisateur incorrect.";
+        error_log("Erreur de préparation : " . $conn->error);
+        echo "Erreur SQL.";
     }
 
-    $stmt->close();
     $conn->close();
 }
-ob_end_flush();
 ?>

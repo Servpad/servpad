@@ -14,23 +14,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    
+
     $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
+
     if ($stmt) {
         $stmt->bind_param("sss", $username, $email, $password);
         if ($stmt->execute()) {
-            echo "Compte créé avec succès, redirection...";
-            header("Location: Connexion.html");
+            // Redirection vers formules.html après création du compte
+            header("Location: formule/formules.html");
             exit();
         } else {
             error_log("Erreur d'insertion : " . $stmt->error);
-            echo "Erreur d'insertion : " . $stmt->error;
+            echo "Erreur d'insertion.";
         }
         $stmt->close();
     } else {
         error_log("Erreur de préparation : " . $conn->error);
-        echo "Erreur SQL : " . $conn->error;
+        echo "Erreur SQL.";
     }
     $conn->close();
 }
