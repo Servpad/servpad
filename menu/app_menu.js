@@ -1,6 +1,6 @@
 // Sélectionner l'élément de l'interrupteur
 const toggleSwitch = document.getElementById('input');
-const AddToMomery1 = document.getElementById('addTomemory');
+
 
 
 // Fonction pour appliquer le thème au chargement de la page
@@ -34,8 +34,17 @@ toggleSwitch.addEventListener('change', () => {
 });
 
 
-function addTomemory() {
-    setItem(test1, coucoulescongolais);
-}
 
-console.log(test1);
+console.log(localStorage);
+
+
+document.getElementById("addTomemory1").addEventListener("click", () => {
+    const valeurFixe = "commande_" + Date.now(); // Une valeur unique ou fixe
+    const cleUnique = "cle_" + Date.now();    // Générer une clé unique
+
+    // Ajouter la donnée dans localStorage
+    localStorage.setItem(cleUnique, valeurFixe);
+
+    // Afficher une confirmation
+    document.getElementById("status").textContent = `commande ajoutée : ${valeurFixe}`;
+});
