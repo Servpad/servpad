@@ -192,6 +192,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function openSubPage() {
-    window.location.href = 'formule-mediteraneenne.html';
+    window.location.href = 'formule-rustique.html';
 }
 
