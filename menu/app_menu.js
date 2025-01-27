@@ -39,7 +39,7 @@ console.log(localStorage);
 
 
 document.getElementById("addTomemory1").addEventListener("click", () => {
-    const valeurFixe = "commande_" + Date.now(); // Une valeur unique ou fixe
+    const valeurFixe = "commande N°" + Date.now(); // Une valeur unique ou fixe
     const cleUnique = "cle_" + Date.now();    // Générer une clé unique
 
     // Ajouter la donnée dans localStorage

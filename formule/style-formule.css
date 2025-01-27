@@ -379,3 +379,37 @@ then set the desired styles for .card-img. */
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.buttoncuisine{
+  background-color: #000000;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 21px;
+
+}
+
+
+.buttoncuisine2{
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.bottombutton{
+  display: flex;
+}
+
+.label3 {
+  width: 156px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 22px;
+  background-color: rgba(43, 43, 43, 1);
+  background-image: linear-gradient(
+    180deg,
+    rgb(43, 43, 43) 0%,
+    rgb(43, 43, 43) 100%
+  );
+
+}
