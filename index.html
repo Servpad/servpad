@@ -9,6 +9,19 @@
     <!-- barre de nav -->
     <title>Servpad</title>
     <link rel="icon" href="image/vaisselle.png" type="image/png">
+    <style>
+        .connexion-button {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    </style>
 </head>
 
 <body>
@@ -214,7 +227,11 @@
         </div>
     </label>
 
+
+    <!-- Bouton de connexion -->
+    <button class="connexion-button" onclick="window.location.href='Connexion/Connexion.html'">Connexion</button>
+
 </body>
 <script src="app.js"></script>
-  
+
 </html>
