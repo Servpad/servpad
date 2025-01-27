@@ -18,8 +18,8 @@
             <input type="password" id="password" name="password" required>
             <button type="submit">Créer un compte</button>
         </form>
-        <p class="p">Don't have an account? <span class="span">Sign Up</span></p>
-        <p class="p line">Or With</p>
+        <p class="p">Déjà un compte? <span class="span" onclick="showLoginForm()">Se connecter</span></p>
+        <p class="p line">Ou avec</p>
         <div class="flex-row">
             <button class="btn google">
                 <svg version="1.1" width="20" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -57,5 +57,23 @@
             </button>
         </div>
     </div>
+
+    <div id="loginForm" class="container" style="display:none;">
+        <h1>Se connecter</h1>
+        <form action="login.php" method="post">
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Se connecter</button>
+        </form>
+    </div>
+
+    <script>
+    function showLoginForm() {
+        document.querySelector('.container').style.display = 'none';
+        document.getElementById('loginForm').style.display = 'block';
+    }
+    </script>
 </body>
 </html>

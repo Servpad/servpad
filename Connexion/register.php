@@ -14,7 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Compte créé avec succès";
+        header("Location: Connexion.html");
+        exit();
     } else {
         echo "Erreur: " . $sql . "<br>" . $conn->error;
     }
