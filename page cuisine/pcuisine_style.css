@@ -3,6 +3,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
+    justify-content: space-around;
 }
 
 .commande {
