@@ -12,21 +12,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn = new mysqli('localhost', 'root', '', 'servpad');
 
     if ($conn->connect_error) {
-        error_log("Connection failed: " . $conn->connect_error);
         die("Connection failed: " . $conn->connect_error);
     }
-
-    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
-
-    if ($conn->query($sql) === TRUE) {
-        error_log("New account created successfully for user: $username");
-        header("Location: Connexion.html");
-        exit();
+    
+    $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    if ($stmt) {
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $stmt->bind_param("sss", $username, $email, $hashed_password);
+        if ($stmt->execute()) {
+            header("Location: Connexion.html");
+            exit();
+        } else {
+            error_log("Erreur d'insertion : " . $stmt->error);
+            echo "Erreur d'insertion.";
+        }
+        $stmt->close();
     } else {
-        error_log("Error: " . $sql . " - " . $conn->error);
-        echo "Erreur: " . $sql . "<br>" . $conn->error;
+        error_log("Erreur de préparation : " . $conn->error);
+        echo "Erreur SQL.";
     }
-
     $conn->close();
+
+    
 }
 ?>
