@@ -1,5 +1,6 @@
 <?php
 session_start();
+ob_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -25,19 +26,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password'])) {
-            // Stocker l'utilisateur en session
             $_SESSION['username'] = $username;
-            echo "Connexion réussie, redirection...";
+            error_log("Connexion réussie pour $username");
             header("Location: account.php");
-            exit();
+            die(); // Stop le script après la redirection
         } else {
-            echo "Mot de passe incorrect";
+            echo "Mot de passe incorrect.";
         }
     } else {
-        echo "Nom d'utilisateur incorrect";
+        echo "Nom d'utilisateur incorrect.";
     }
 
     $stmt->close();
     $conn->close();
 }
+ob_end_flush();
 ?>
