@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTheme(darkMode); // Appliquer le thème en fonction de l'état
 });
 
+
 // Ajouter un écouteur d'événement pour le changement d'état
 toggleSwitch.addEventListener('change', () => {
     if (toggleSwitch.checked) {

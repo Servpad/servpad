@@ -14,8 +14,29 @@
 
 <body>
   <header>
-  <h1>Formule Rustique</h1>
-  <img src="/image/galette-cusine-rustique-francaise.jpg" alt="Galette Rustique Française"> 
+    <h1>Formule Rustique</h1>
+    <div class="slider-container">
+      <div class="menu">
+              <label for="slider-dot-1"></label>
+              <label for="slider-dot-2"></label>
+              <label for="slider-dot-3"></label>
+      </div>
+    
+              <input class="slide-input" id="slider-dot-3" type="radio" name="slides" checked>
+              <img class="slide-img" src="/image/brownie.jpg">
+    
+              <input class="slide-input" id="slider-dot-2" type="radio" name="slides" checked>
+              <img class="slide-img" src="/image/galette-cusine-rustique-francaise.jpg">
+    
+              <input class="slide-input" id="slider-dot-1" type="radio" name="slides" checked>
+              <img class="slide-img" src="/image/planche-charcuterie.jpeg">
+    
+    </div>
+              <h1>28€</h1>
+              <button class="custom-button" onclick="addToCart('Formule Rustique', 28)" >Commander
+              
+  </header>
+
     <section>
     <h2>Entrée : Charcuterie</h2>
     <p>Ingrédients: Jambon aux noix, saucisson, mortadelle, Chorizo  </p>
@@ -26,30 +47,29 @@
     <p>Ingrédients : Chocolat noir, chocolat au lait, sucre, farine, sel, Beurre, Oeuf</p>
     <p>Plongez dans l’intensité d’un brownie fondant et gourmand, où chaque bouchée dévoile un équilibre parfait entre la richesse du chocolat et une douceur irrésistible. Une vraie tentation pour les amoureux du chocolat !</p>
     </section>
-  </header>
+ 
     <section>
     <h2>!Allergènes!</h2>
     <p>Oeuf, Gluten, Fruits a coques, Lait  </p>
     </section>
 
-<div class="slider-container">
-  <div class="menu">
-          <label for="slider-dot-1"></label>
-          <label for="slider-dot-2"></label>
-          <label for="slider-dot-3"></label>
-  </div>
 
-          <input class="slide-input" id="slider-dot-1" type="radio" name="slides" checked>
-          <img class="slide-img" src="/image/planche-charcuterie.jpeg">
-
-          <input class="slide-input" id="slider-dot-2" type="radio" name="slides" checked>
-          <img class="slide-img" src="/image/galette-cusine-rustique-francaise.jpg">
-
-          <input class="slide-input" id="slider-dot-3" type="radio" name="slides" checked>
-          <img class="slide-img" src="/image/brownie.jpg">
-
-</div>
 
 </body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide-input');
+    let currentIndex = 0;
+
+    setInterval(() => {
+      slides[currentIndex].checked = false;
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].checked = true;
+    }, 5000);
+  });
+</script>
+
+<script src="app-formules.js"></script>
 
 </html>
