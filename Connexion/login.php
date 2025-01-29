@@ -1,11 +1,4 @@
 <?php
-// ...existing code...
-if (password_verify($password, $row['password'])) {
-    // Redirection vers index.html après connexion réussie
-    header("Location: index.html");
-    exit();
-}
-// ...existing code...<?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -36,10 +29,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: formule/formules.html");
                 exit();
             } else {
-                echo "Mot de passe incorrect.";
+                // Redirection vers Connexion.html en cas de mot de passe incorrect
+                header("Location: Connexion.html");
+                exit();
             }
         } else {
-            echo "Nom d'utilisateur incorrect.";
+            // Redirection vers Connexion.html en cas de nom d'utilisateur incorrect
+            header("Location: Connexion.html");
+            exit();
         }
 
         $stmt->close();
