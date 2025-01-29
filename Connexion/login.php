@@ -26,16 +26,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $row = $result->fetch_assoc();
             if (password_verify($password, $row['password'])) {
                 // Redirection vers formules.html après connexion réussie
-                header("Location: formule/formules.html");
+                header("Location: ../formule/formules.html");
                 exit();
             } else {
                 // Redirection vers Connexion.html en cas de mot de passe incorrect
-                header("Location: Connexion.html");
+                header("Location: Connexion.html?error=incorrect_password");
                 exit();
             }
         } else {
             // Redirection vers Connexion.html en cas de nom d'utilisateur incorrect
-            header("Location: Connexion.html");
+            header("Location: Connexion.html?error=user_not_found");
             exit();
         }
 
