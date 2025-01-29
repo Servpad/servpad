@@ -1,4 +1,11 @@
 <?php
+// ...existing code...
+if (password_verify($password, $row['password'])) {
+    // Redirection vers index.html après connexion réussie
+    header("Location: index.html");
+    exit();
+}
+// ...existing code...<?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
