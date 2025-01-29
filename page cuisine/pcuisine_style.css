@@ -22,3 +22,10 @@
     font-family: 'Shrikhand', cursive;
     text-align: center;
 }
+
+.buttonSuprecomande{
+   border-radius: 25px;
+   height: 50px;
+   font-size: 30px;
+   
+}
