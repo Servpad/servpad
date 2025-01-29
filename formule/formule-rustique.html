@@ -33,10 +33,12 @@
     
     </div>
               <h1>28€</h1>
-              <button class="custom-button" onclick="addToCart('Formule Rustique', 28)" >Commander
+              <button class="custom-button" onclick="addToOrder('Formule Rustique', 28)" >Commander </button>
               
   </header>
 
+
+  
     <section>
     <h2>Entrée : Charcuterie</h2>
     <p>Ingrédients: Jambon aux noix, saucisson, mortadelle, Chorizo  </p>
@@ -50,9 +52,26 @@
  
     <section>
     <h2>!Allergènes!</h2>
-    <p>Oeuf, Gluten, Fruits a coques, Lait  </p>
+    <p>Oeuf, Gluten, Fruits à coques, Lait  </p>
     </section>
 
+<!-- Panier Section -->
+<div class="section" id="cart-section">
+  <h2>Votre Panier</h2>
+  <div id="cart-list">
+      <p>Votre panier est vide.</p>
+  </div>
+  <button class="actin-button" onclick="validateCart()">Valider les Commandes</button>
+
+  <a class="buttoncuisine" href="../page cuisine/Pcuisisne.html">
+
+      <button class="buttoncuisine2">
+          <span class="label3">admin-section</span>
+          <span class="gradient-container3">
+      </button>
+
+  </a>
+</div>
 
 
 </body>
