@@ -648,4 +648,73 @@ h2 {
       }
     }
     
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('fondecranaccueil.webp'); 
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      line-height: 1.6;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
   
+  header {
+      background-color: rgba(0, 0, 0, 0.8); 
+      padding: 20px 40px;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.8);
+  }
+  
+  header h1 {
+      font-size: 30px;
+      color: #ff9d3b; 
+      margin-bottom: 10px;
+  }
+  
+  header p {
+      font-size: 20px;
+      font-weight: lighter;
+  }
+  
+  main {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba();
+      border-radius: 15px;    
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
+      width: 100%;
+      max-width: 800px;
+  }
+  
+  
+  .titre h2 {
+      font-size: 30px;
+      color: #ff9d3b;
+      margin-bottom: 20px;
+  }
+  
+  .titre p {
+      font-size: 20px;
+      color: #ddd;
+      margin-bottom: 30px;
+  }
+  
+  .bouton {
+      display: inline-block;
+      background-color: #e63946;
+      color: white;
+      font-size: 20px;
+      padding: 15px 30px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+  }
+  
+  .bouton:hover {
+      background-color: #a9292d;
+  }
